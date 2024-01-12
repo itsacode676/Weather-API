@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    z-index: -1;
+}
+
+.container {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-block: 1rem;
+    color: var(--colorLight2);
+    font-size: 2rem;
+}
+
+.tab-container {
+    position: relative;
+    margin: 0 auto;
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: -3rem;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+    z-index: 2;
+}
+
+/* Tab */
+.tabColor {
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.tab-container .tab {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+    color: var(--colorLight2)
+}
+
+.ui-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Acess Scree UI */
+
+.acess-container {
+    position: relative;
+    width: 100%;
+    margin-top: 7%;
+    color: var(--colorLight2);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.acess-container h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.acess-container p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.acess-btn {
+    /* appearance: none;
+    background: none;
+    border: none; */
+    all: unset;
+    background-color: var(--colorDark2);
+    font-size: 1rem;
+    color: var(--colorLight2);
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Loader */
+.loading-container {
+    z-index: 100;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    bottom: -5rem;
+    font-size: 1.5rem;
+    color: var(--colorLight2);
+    text-transform: uppercase;
+    display: none;
+}
+
+/* Seacrch bar*/
+.search-form {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 4rem;
+    width: 90%;
+    margin: 0 auto;
+    gap: 0.5rem;
+    margin-left: 3rem;
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.search-form input {
+    all: unset;
+    background-color: rgba(219, 226, 239, 0.5);
+    padding: 0 20px;
+    border-radius: 10px;
+    width: calc(50% - 80px);
+    height: 40px;
+    color: var(--colorLight2);
+
+}
+
+.search-form input::placeholder {
+    color: var(--colorLight2);
+}
+
+.search-button {
+    all: unset;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorDark2);
+
+}
+
+.search-button img {
+    height: 20px;
+}
+
+/* User Content*/
+.user-container {
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+    gap: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    display: flex;
+}
+
+.user-container .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 2rem;
+    color: var(--colorLight2);
+    margin-block: 1rem;
+}
+
+.desc-container,
+.temp-container {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--colorLight2);
+}
+
+.image-container {
+    height: 5rem;
+}
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--colorLight2);
+    background-color: rgba(219, 226, 239, 0.5);
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+.card img {
+    height: 5rem;
+}

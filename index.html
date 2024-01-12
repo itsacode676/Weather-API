@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="./assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300&family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Heading-->
+        <h1>WEATHER APP</h1>
+
+        <!--Tab Switching-->
+        <div class="tab-container">
+            <div class="tab" userWeather class="user-weather">
+                Your <span id="weather">Weather</span>
+            </div>
+            <div class="tab" searchWeather>
+                Search Weather
+            </div>
+        </div>
+
+        <!--ALL UI-->
+        <div class="ui-container">
+
+            <!--Location UI-->
+            <div class="acess-container" locationScreen>
+                <img src="assets/location.png" alt="" height="80" width="80" loading="lazy">
+                <h3>Grant Location Access</h3>
+                <p>Allow Access to get weather Information</p>
+                <button class="acess-btn" grantAcess>
+                    Grant Acess
+                </button>
+            </div>
+
+            <!--Search UI-->
+            <div class="search-form" searchForm>
+                <input type="text " placeholder="Search for city .." searchText class="search-input">
+                <button class="search-button">
+                    <img src="assets/search.png" alt="" height="10" searchBtn class="search-image">
+                </button>
+            </div>
+
+            <!--Loading UI-->
+            <div class="loading-container" loadingScreen>
+                <img src="assets/loading.gif" alt="" height="150" class="loader">
+                <p>Loading</p>
+            </div>
+
+            <div class=" user-container" userScreen>
+                <!--Information UI-->
+                <div>
+                    <div class="info">
+                        <div class="city-container" cityName></div>
+                        <img class="flag-container" countryFlag height="25">
+                    </div>
+                    <div class="desc-container" weatherDesc></div>
+                    <img weatherIcon class="image-container">
+                    <div class="temp-container" weatherTemp></div>
+                </div>
+
+                <!--Cards Container-->
+                <div class="cards-container">
+                    <!--Card 1-->
+                    <div class="card">
+                        <img src="assets/wind.png" alt="">
+                        <p>Windpeed</p>
+                        <div class="value" windValue></div>
+                    </div>
+
+                    <!--Card 2-->
+                    <div class="card">
+                        <img src="assets/cloud.png" alt="">
+                        <p>Cloudiness</p>
+                        <div class="value" cloudValue></div>
+                    </div>
+
+                    <!--Card 3-->
+                    <div class="card">
+                        <img src="assets/humidity.png" alt="">
+                        <p>Humidity</p>
+                        <div class="value" humidityValue></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
